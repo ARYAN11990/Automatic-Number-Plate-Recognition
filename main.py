@@ -5,7 +5,7 @@ import pytesseract
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 plate_cascade = cv2.CascadeClassifier('haarcascade_russian_plate_number.xml')
-img = cv2.imread('c3.jpg')
+img = cv2.imread('sample number-plates photos\c3.jpg')
 img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 plates = plate_cascade.detectMultiScale(img_gray, 1.1, 4)
